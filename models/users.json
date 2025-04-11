@@ -1,0 +1,27 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "hashedpassword"
+  },
+  {
+    "name": "hello",
+    "email": "hello@gmail.com",
+    "password": "$2b$10$fuv91B/Uy0JPZbO.nAKzZudIvLEzB/hkIhwogYqYYjwkXlGyCpYdG"
+  },
+  {
+    "name": "muskan",
+    "email": "muskan@gmail.com",
+    "password": "$2b$10$3oQ.1eNeR5WFmQZaDX2Y1Ov1aGR9uzW46Yt9Ii.cHPWpsGIiyAaMu"
+  },
+  {
+    "name": "ojaswi",
+    "email": "ojaswi123@gmail.com",
+    "password": "$2b$10$5YMo/Fkj8brnkNMkUyuJtulF8kwDWA5ojaMvfQjZqQJ.qiRN47GuO"
+  },
+  {
+    "name": "abc",
+    "email": "abc@gmail.com",
+    "password": "$2b$10$ebF0WrODaEPS3Hi0rPFnWeGf1JvnCFbazu/nP3y2t67gSm/nVUKqa"
+  }
+]

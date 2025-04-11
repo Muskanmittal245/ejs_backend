@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Sign-Up Form</title>
+    <link rel="stylesheet" href="/styles/login.css" >
+</head>
+
+<body>
+    <div class="container">
+        <!-- Preview Button -->
+        <button id="preview-btn" class="preview-text" hidden>Preview</button>
+
+        <!-- Login Form -->
+        <div class="login-box" id="login-form">
+            <h2>LOG IN</h2>
+            <form id="login-form-element">
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" placeholder="📧Enter Email" id="login-email" required />
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" placeholder="🔒Enter Password" id="login-password" required />
+                </div>
+
+                <button type="submit" class="login-btn">SUBMIT</button>
+
+                <div class="switch-link">
+                    <p>Don't have an account? <a href="#" id="sign-up-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sign-Up Form (Hidden by Default) -->
+        <div class="login-box hidden" id="signup-form">
+            <h2>SIGN UP</h2>
+            <form id="signup-form-element">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" placeholder="👤Enter Username" id="signup-name" required />
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" placeholder="📧Enter Email" id="signup-email" required />
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" placeholder="🔒Create Password" id="signup-password" required />
+                </div>
+
+                <button type="submit" class="login-btn">REGISTER</button>
+
+                <div class="switch-link">
+                    <p>Already have an account? <a href="#" id="login-link">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bottom Button -->
+    <div class="bottom-text">
+        <button id="bottom-btn"></button>
+    </div>
+    <script src="/scripts/login.js"></script>
+</body>
+
+</html>

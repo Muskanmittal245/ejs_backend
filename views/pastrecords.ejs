@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History Records</title>
+    <link rel="stylesheet" href="/styles/records.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/logo.jpg" alt="hospi-connect">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/appointment">Appointment</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/login" class="btn">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Search Form -->
+            <section class="search-section">
+                <h2>Search Patient Records</h2>
+                <form id="searchForm">
+                    <label for="patientId">Enter Patient ID:</label>
+                    <div class="form-group">
+                        <input type="text" id="patientId" name="patientId" placeholder="Enter Patient ID (e.g., P123)" required>
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+                <p id="errorMessage" class="error-message"></p>
+            </section>
+
+            <!-- Patient Information -->
+            <section id="patientInfo" class="hidden info-section">
+                <h2>Patient Details</h2>
+                <div class="details">
+                    <p><strong>Name:</strong> <span id="patientName">-</span></p>
+                    <p><strong>Age:</strong> <span id="patientAge">-</span></p>
+                    <p><strong>Gender:</strong> <span id="patientGender">-</span></p>
+                </div>
+            </section>
+
+            <!-- Medical History -->
+            <section id="medicalHistory" class="hidden info-section">
+                <h2>Medical History</h2>
+                <ul id="historyList" class="history-list">
+                    <li>No records found.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/appointment">Appointment</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: 000-000-000</p>
+                <p>Email: info@email.com</p>
+                <p>Location: India</p>
+            </div>
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Committed to Quality Healthcare & Patient Well-being</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+</html>

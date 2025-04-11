@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="/styles/about.css"> <!-- Serve static CSS -->
+    <script defer src="/scripts/about.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>MediLab</h1>
+        <nav>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/booking">Booking</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Quality Healthcare at Your Fingertips</h1>
+        <p>Book appointments, consult specialists, and access emergency care 24/7.</p>
+    
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search services..." id="search" class="search-input">
+            <button class="search-button" onclick="searchServices()">Search</button>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="who-we-are-section">
+            <h2 class="who-we-are-title">Who We Are</h2>
+            <p class="who-we-are-text">
+                Our hospital management system is designed to streamline operations, enhance patient care, and optimize administrative processes.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="/assets/doctor-team.jpeg" alt="Patient">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <h3>General Checkup</h3>
+            <p>Comprehensive health check-ups for your well-being.</p>
+        </div>
+        <div class="service-card">
+            <h3>Specialist Consultation</h3>
+            <p>Consult with top specialists for personalized care.</p>
+        </div>
+        <div class="service-card">
+            <h3>Emergency Care</h3>
+            <p>24/7 emergency services when you need them the most.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" id="contact-name" required>
+            <input type="email" placeholder="Your Email" id="contact-email" required>
+            <textarea placeholder="Your Message" id="contact-message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/booking">Appointment</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Phone: 000-000-000</p>
+            <p>Email: info@email.com</p>
+            <p>Location: India</p>
+        </div>
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Dedicated to Patient Well-being,</p>
+            <p>Compassionate Service,</p>
+            <p>Committed to Quality Healthcare</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "mobileNumber": "1234567890",
+    "appointmentDate": "2025-03-10",
+    "department": "general",
+    "doctorName": "Dr. Smith"
+  },
+  {
+    "id": 2,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-03-06",
+    "department": "general",
+    "doctorName": "Dr. Manan Aggarwal"
+  },
+  {
+    "id": 3,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-03-06",
+    "department": "general",
+    "doctorName": "Dr. Manan Aggarwal"
+  },
+  {
+    "id": 4,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-03-06",
+    "department": "cardiology",
+    "doctorName": "Dr. Manan Aggarwal"
+  },
+  {
+    "id": 5,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-03-06",
+    "department": "cardiology",
+    "doctorName": "Dr. Manan Aggarwal"
+  },
+  {
+    "id": 6,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-03-06",
+    "department": "general",
+    "doctorName": "Dr. Manan Aggarwal"
+  },
+  {
+    "id": 7,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-03-06",
+    "department": "general",
+    "doctorName": "Dr. Manan Aggarwal"
+  },
+  {
+    "id": 8,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "7082510147",
+    "appointmentDate": "2006-09-13",
+    "department": "general",
+    "doctorName": "ojaswi"
+  },
+  {
+    "id": 9,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "7082510147",
+    "appointmentDate": "2006-09-13",
+    "department": "general",
+    "doctorName": "ojaswi"
+  },
+  {
+    "id": 10,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-04-11",
+    "department": "general",
+    "doctorName": "Dr. Ajay"
+  },
+  {
+    "id": 11,
+    "firstName": "Muskan",
+    "lastName": "Mittal",
+    "email": "mittalmuskan602@gmail.com",
+    "mobileNumber": "07082510147",
+    "appointmentDate": "2025-04-10",
+    "department": "general",
+    "doctorName": "Dr. Ajay"
+  }
+]
