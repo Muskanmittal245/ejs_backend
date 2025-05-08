@@ -1,6 +1,6 @@
 /* General Styles */
-body {
-    background-image: url('../assets/login.jpg');
+/* body {
+    background-image: url('../assets/Welcome1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -12,16 +12,16 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-}
+} */
 
 /* Container */
-.container {
+/* .container {
     text-align: center;
     
-}
+} */
 
 /* Preview Button */
-.preview-text {
+/* .preview-text {
     font-size: 1.5rem;
     text-transform: uppercase;
     background: #1ABC9C;
@@ -36,26 +36,26 @@ body {
 
 .preview-text:hover {
     background: #16A085;
-}
+} */
 
 /* Login & Sign-Up Box */
-.login-box {
+/* .login-box {
     background: rgba(1, 77, 103, 0.562);
     padding: 2rem;
     border-radius: 10px;
     width: 320px;
     display:block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added box shadow */
-    backdrop-filter: blur(10px);
-}
+    /* backdrop-filter: blur(10px); */
+/* } */ */
 
 /* Hide Sign-Up Form Initially */
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 /* Input Fields */
-.input-box {
+/* .input-box {
     position: relative;
     margin-bottom: 1.5rem;
 }
@@ -89,19 +89,19 @@ body {
     left: 30px;
     font-size: 0.8em;
     color: #1ABC9C;
-}
+} */
 
 /* Icons */
-.input-box .icon {
+/* .input-box .icon {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: #1ABC9C;
-}
+} */
 
 /* Buttons */
-.login-btn {
+/* .login-btn {
     width: 100%;
     padding: 12px;
     background: #1ABC9C;
@@ -118,10 +118,10 @@ body {
     background: #16A085;
     box-shadow: 0px 8px 15px rgba(26, 188, 156, 0.5);
     transform: scale(1.05);
-}
+} */
 
 /* Switch Link */
-.switch-link {
+/* .switch-link {
     margin-top: 10px;
 }
 
@@ -132,10 +132,10 @@ body {
 
 .switch-link a:hover {
     text-decoration: underline;
-}
+} */
 
 /* Bottom Button */
-.bottom-text {
+/* .bottom-text {
     margin-top: 30px;
 }
 
@@ -151,4 +151,134 @@ body {
 
 #bottom-btn:hover {
     color: white;
-}
+} */
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f9fc;
+    padding: 0 5%;
+  }
+  
+  .left-section {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+    background: #4a90e2;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d1b3d;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0d1b3d;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .forgot {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #0d1b3d;
+  }
+  
+  .forgot:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3366cc;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #254ba2;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .illustration {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .form-toggle {
+    color: #3366cc;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media (max-width: 900px) {
+    body {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .right-section {
+      margin-top: 30px;
+    }
+  
+    .forgot {
+      text-align: center;
+    }
+  }

@@ -1,74 +1,217 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f7f9fc;
+      padding: 0 5%;
+    }
+
+    .left-section {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      background: #4a90e2;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0d1b3d;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #0d1b3d;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .forgot {
+      text-align: right;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #0d1b3d;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3366cc;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #254ba2;
+    }
+
+    .right-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .illustration {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .right-section {
+        margin-top: 30px;
+      }
+
+      .forgot {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-section">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <div class="logo-text">MediCare</div>
+    </div>
+
+    <div class="title">Login</div>
+    <form>
+      <div class="form-group">
+        <input type="email" placeholder="Email address" required />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" required />
+      </div>
+      <div class="forgot">Forgot password?</div>
+      <button class="btn" type="submit">Sign in</button>
+    </form>
+  </div>
+
+  <div class="right-section">
+    <img src="assets/Welcome2.jpg" alt="Hospital Illustration" class="illustration"/>
+  </div>
+
+</body>
+</html> -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login & Sign-Up Form</title>
-    <link rel="stylesheet" href="/styles/login.css" >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare Login & Sign Up</title>
+  <link rel="stylesheet" href="/styles/login.css" />
 </head>
-
 <body>
-    <div class="container">
-        <!-- Preview Button -->
-        <button id="preview-btn" class="preview-text" hidden>Preview</button>
 
-        <!-- Login Form -->
-        <div class="login-box" id="login-form">
-            <h2>LOG IN</h2>
-            <form id="login-form-element">
+  <div class="left-section">
 
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="email" placeholder="📧Enter Email" id="login-email" required />
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="password" placeholder="🔒Enter Password" id="login-password" required />
-                </div>
-
-                <button type="submit" class="login-btn">SUBMIT</button>
-
-                <div class="switch-link">
-                    <p>Don't have an account? <a href="#" id="sign-up-link">Sign Up</a></p>
-                </div>
-            </form>
-        </div>
-
-        <!-- Sign-Up Form (Hidden by Default) -->
-        <div class="login-box hidden" id="signup-form">
-            <h2>SIGN UP</h2>
-            <form id="signup-form-element">
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="text" placeholder="👤Enter Username" id="signup-name" required />
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="email" placeholder="📧Enter Email" id="signup-email" required />
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="password" placeholder="🔒Create Password" id="signup-password" required />
-                </div>
-
-                <button type="submit" class="login-btn">REGISTER</button>
-
-                <div class="switch-link">
-                    <p>Already have an account? <a href="#" id="login-link">Log In</a></p>
-                </div>
-            </form>
-        </div>
+    <!-- Logo -->
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <div class="logo-text">HospiConnect</div>
     </div>
 
-    <!-- Bottom Button -->
-    <div class="bottom-text">
-        <button id="bottom-btn"></button>
+    <!-- LOGIN FORM -->
+    <div id="login-form">
+      <div class="title">Login</div>
+      <form id="login-form-element">
+        <div class="form-group">
+          <input type="email" id="login-email" placeholder="Email address" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="login-password" placeholder="Password" required />
+        </div>
+        <div class="forgot">Forgot password?</div>
+        <button class="btn" type="submit">Sign in</button>
+        <p style="margin-top:10px; font-size: 14px;">Don't have an account? <span id="sign-up-link" class="form-toggle">Sign up</span></p>
+      </form>
     </div>
-    <script src="/scripts/login.js"></script>
+
+    <!-- SIGN-UP FORM -->
+    <div id="signup-form" class="hidden">
+      <div class="title">Sign Up</div>
+      <form id="signup-form-element">
+        <div class="form-group">
+          <input type="text" id="signup-name" placeholder="Full Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="signup-email" placeholder="Email address" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="signup-password" placeholder="Password" required />
+        </div>
+        <button class="btn" type="submit">Create Account</button>
+        <p style="margin-top:10px; font-size: 14px;">Already have an account? <span id="login-link" class="form-toggle">Log in</span></p>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="right-section">
+    <img src="/assets/Welcome2.jpg" alt="Hospital Illustration" class="illustration"/>
+  </div>
+
+  <script src="/scripts/login.js"></script>
 </body>
-
 </html>

@@ -20,14 +20,14 @@ const writeBookings = (bookings) => {
 
 router.post("/booking", (req, res) => {
     console.log(req.body);
-    const { firstName, lastName, email, mobileNumber, appointmentDate, department, doctorName } = req.body
+    const { firstName, lastName, email, mobileNumber, appointmentDate, department} = req.body
 
-    if (!firstName || !lastName || !email || !mobileNumber || !appointmentDate || !department || !doctorName) {
+    if (!firstName || !lastName || !email || !mobileNumber || !appointmentDate || !department) {
         return res.status(400).json({ success: false, message: "All fields are required!" });
     }
 
     const bookings = readBookings()
-    const newAppointment = { id: bookings.length + 1, firstName, lastName, email, mobileNumber, appointmentDate, department, doctorName };
+    const newAppointment = { id: bookings.length + 1, firstName, lastName, email, mobileNumber, appointmentDate, department };
     bookings.push(newAppointment);
     writeBookings(bookings);
 

@@ -1,101 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System</title>
-    <link rel="stylesheet" href="/styles/about.css"> <!-- Serve static CSS -->
-    <script defer src="/scripts/about.js"></script>
+  <meta charset="UTF-8" />
+  <title>About Us - HospiConnect</title>
+  <link rel="stylesheet" href="/styles/about.css">
+
 </head>
 <body>
+<%- include('partials/header') %>
+  <!-- <header>
+    <div><img src="/path-to-logo.png" alt="HospiConnect Logo" height="40"></div>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">PRODUCT VIDEOS</a>
+      <a href="#">PRODUCTS</a>
+      <a href="#">SOLUTIONS</a>
+      <a href="#">CONTACT US</a>
+    </nav>
+  </header> -->
 
-    <!-- Header -->
-    <header>
-        <h1>MediLab</h1>
-        <nav>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/booking">Booking</a>
-        </nav>
-    </header>
+  <div class="hero">
+    <h1> About Us </h1>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Quality Healthcare at Your Fingertips</h1>
-        <p>Book appointments, consult specialists, and access emergency care 24/7.</p>
-    
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" placeholder="Search services..." id="search" class="search-input">
-            <button class="search-button" onclick="searchServices()">Search</button>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="who-we-are-section">
-            <h2 class="who-we-are-title">Who We Are</h2>
-            <p class="who-we-are-text">
-                Our hospital management system is designed to streamline operations, enhance patient care, and optimize administrative processes.
-            </p>
-        </div>
-        <div class="about-image">
-            <img src="/assets/doctor-team.jpeg" alt="Patient">
-        </div>
-    </section>
+  <!-- <div class="breadcrumb">
+    <span>Home</span> > About Us
+  </div> -->
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-card">
-            <h3>General Checkup</h3>
-            <p>Comprehensive health check-ups for your well-being.</p>
-        </div>
-        <div class="service-card">
-            <h3>Specialist Consultation</h3>
-            <p>Consult with top specialists for personalized care.</p>
-        </div>
-        <div class="service-card">
-            <h3>Emergency Care</h3>
-            <p>24/7 emergency services when you need them the most.</p>
-        </div>
-    </section>
+  <div class="overview">
+    <h2>HospiConnect Quantitative Overview</h2>
+    <p>Founded in 2025, with a footprint spanning across India.</p>
+    <div class="numbers">
+      <div>
+        <div class="highlight">3,000+</div>
+        <p>Doctors and growing!</p>
+      </div>
+      <div>
+        <div class="blue-text">300+</div>
+        <p>Clients</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-form">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" id="contact-name" required>
-            <input type="email" placeholder="Your Email" id="contact-email" required>
-            <textarea placeholder="Your Message" id="contact-message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <div class="section">
+    <div class="cards">
+      <div class="card green-border">
+        <h3>Our Vision</h3>
+        <p>Empower healthcare enterprises to deliver exceptional healthcare services and enhance patient care worldwide through the utilization of advanced technology.</p>
+      </div>
+      <div class="card blue-border">
+        <h3>Our Mission</h3>
+        <p>Provide an affordable and secure healthcare platform for doctors, clinics, and hospitals, delivering exceptional value at a competitive price for optimized healthcare solutions.</p>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/booking">Appointment</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <p>Phone: 000-000-000</p>
-            <p>Email: info@email.com</p>
-            <p>Location: India</p>
-        </div>
-        <div class="footer-section">
-            <h4>About Us</h4>
-            <p>Dedicated to Patient Well-being,</p>
-            <p>Compassionate Service,</p>
-            <p>Committed to Quality Healthcare</p>
-        </div>
-    </footer>
-
+  <div class="section">
+    <h2>Values</h2>
+    <p>
+      Our core values shape our identity and serve as a stabilizing force during challenging times.<br>
+      Our organizational culture prioritizes customer focus, ongoing enhancement, and dedicated customer service.
+    </p>
+    <div class="cards">
+      <div class="card2">
+        <div class="icon">⭐</div>
+        <h4>Customer Focus</h4>
+        <p>HospiConnect excels in both meeting customer expectations and leading the market in product features by actively listening to customer feedback and needs.</p>
+      </div>
+      <div class="card2">
+        <div class="icon">💼</div>
+        <h4>Continuous Improvement</h4>
+        <p>Our commitment to quality is an ongoing journey, as we persistently strive to provide features that effortlessly meet the requirements of users.</p>
+      </div>
+      <div class="card2">
+        <div class="icon orange-text">🤝</div>
+        <h4>Customer Service</h4>
+        <p>Our dedicated commitment to customer service not only delights our customers but also fuels their eagerness to refer our services to others.</p>
+      </div>
+    </div>
+  </div>
+  <%- include('partials/footer') %>
 </body>
 </html>

@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediLab Hospital</title>
-    <link rel="stylesheet" href="/styles/services.css">
-    <script src="/script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <title>Services - HospiConnect</title>
+  <link rel="stylesheet" href="/styles/services.css">
 </head>
 <body>
-
-    <!-- Include Header -->
     <%- include('partials/header') %>
 
-    <!-- Services Section -->
-    <main>
-        <section class="services">
-            <div class="service">
-                <i class="fas fa-user-injured"></i>
-                <h2>Patient Management</h2>
-                <p>Manage patient records, track appointments, and enhance doctor efficiency.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-user-md"></i>
-                <h2>Staff Management</h2>
-                <p>Monitor staff attendance, organize shifts, and streamline hospital operations.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-pills"></i>
-                <h2>Medicine Inventory</h2>
-                <p>Track available medicines, manage stock levels, and automate reordering.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-bed"></i>
-                <h2>Bed Availability</h2>
-                <p>View real-time bed occupancy, allocate beds, and ensure efficient ward assignments.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-ambulance"></i>
-                <h2>Emergency Services</h2>
-                <p>Connect with emergency services and dispatch ambulances for immediate care.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-chart-line"></i>
-                <h2>Analytics & Reports</h2>
-                <p>Visualize hospital performance with insights for improvement.</p>
-            </div>
-        </section>
-    </main>
+  <!-- <header>
+    <div><img src="/path-to-logo.png" alt="HospiConnect Logo" height="40"></div>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">PRODUCT VIDEOS</a>
+      <a href="#">PRODUCTS</a>
+      <a href="#">SOLUTIONS</a>
+      <a href="#">CONTACT US</a>
+    </nav>
+  </header> -->
 
-    <!-- Include Footer -->
-    <%- include('partials/footer') %>
+  <div class="hero">
+    <h1> Services </h1>
+  </div>
 
+  <!-- <div class="breadcrumb">
+    <span>Home</span> > About Us
+  </div> -->
+
+
+  <div class="section">
+    <div class="cards">
+      <div class="card green-border">
+        <h3>Appointment Booking</h3>
+        <p>Central integrated smart calendar for your doctor's appointment.</p>
+      </div>
+      <div class="card blue-border">
+        <h3>Staff Manangement</h3>
+        <p>Monitor staff attendance, organize shifts, and streamline hospital operations.</p>
+      </div>
+      <div class="card orange-border">
+        <h3>Patient Manangement</h3>
+        <p>Manage patient records, track appointments, and enhance doctor efficiency.</p>
+      </div>
+      <div class="card light-blue-border">
+        <h3>Bed Availability</h3>
+        <p>View real-time bed occupancy, allocate beds, and ensure efficient ward assignments.</p>
+      </div>
+      <div class="card green2-border">
+        <h3>Pharmacy</h3>
+        <p>Create integrated pharmacy. Record stocks, issue bills and maintain accounts</p>
+      </div>
+      <div class="card orange-border">
+        <h3>Analytics and Report</h3>
+        <p>Visualize hospital performance with insights for improvement.</p>
+      </div>
+      <div class="card light-blue2-border">
+        <h3>Lab</h3>
+        <p>Create a paperless lab - from sample taking to sending reports by email and SMS.</p>
+      </div>
+      <div class="card extra-border">
+    </div>
+    </div>
+  </div>
+
+
+  
+  <%- include('partials/footer') %>
 </body>
 </html>

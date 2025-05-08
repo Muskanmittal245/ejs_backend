@@ -4,20 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    header {
+    background-color: white; /* Deep Navy */
+    color: black;
+    padding: 30px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a7cbef; /* Light Blue */
+}
+
+.nav-links .btn {
+    background-color: #007bff; /* Blue */
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links .btn:hover {
+    background-color: #0056b3; /* Darker Blue */
+    color: #FFFFFF;
+}
+  </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
           <div class="logo">
-            <img src="/home/logo.jpg" alt="hospi-connect">
+            <img src="/public/assets/logo.jpg" alt="HospiConnect" height="40" style="margin-right: 10px;">
+            <span style="font-size: 18px; font-weight: bold;"></span>
           </div>
           <ul class="nav-links">
-            <li><a href="/">Home</a></li>
+            <li><a href="/"></a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/booking">Appointment</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/login" class="btn">Sign in</a></li>
+            
           </ul>
         </nav>
       </header>

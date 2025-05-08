@@ -2,7 +2,7 @@ window.onload = function () {
     let lastVisit = localStorage.getItem('lastVisit');
 
     if (lastVisit) {
-        document.getElementById('lastVisit').innerText = `You last visited on ${lastVisit}`;
+        document.getElementById('lastVisit').innerText =`You last visited on ${lastVisit}`;
     } else {
         document.getElementById('lastVisit').innerText = "This is your first visit!";
     }

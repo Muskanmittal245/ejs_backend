@@ -19,6 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(logger);
+app.use(express.static('public')); // To serve CSS and JS
+
 
 // Define routes for EJS templates
 app.get("/", (req, res) => res.render("welcome"));
@@ -26,6 +28,7 @@ app.get("/login", (req, res) => res.render("login"));
 app.get("/about", (req, res) => res.render("about"));
 app.get("/booking", (req, res) => res.render("booking"));
 app.get("/services", (req, res) => res.render("services"));
+app.get("/contact", (req, res) => res.render("contact"));
 
 // API routes
 const authRoutes = require("./routes/auth");

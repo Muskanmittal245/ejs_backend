@@ -1,55 +1,72 @@
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
 }
+
+/* #showcase {
+  background-image: url('/assets/Welcome1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #0e0e0e;
+} */
+
 
 #showcase {
-    background-image: url('/assets/welcome.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
+background-image: url('/assets/Welcome1.jpg');
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start; /* Move content to the left */
+text-align: left;        /* Align text to the left */
+color: #304668;
+padding-left: 5rem;      /* Add some spacing from the left edge */
 }
+
 
 #showcase h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-#quote {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#dynamic-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-#dynamic-section h2 {
-  font-size: 2rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
-#lastVisit {
+#quote {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
+
+.button {
+display: inline-block;
+padding: 1.5rem 2rem;
+margin: 1rem;
+background-color: #0f93cc;
+color: #fff;
+text-decoration: none;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1.4rem;
+}
+
+/* #dynamic-section {
+padding: 2rem;
+text-align: center;
+} */
+
+#dynamic-section h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+/* #lastVisit {
+font-size: 1.5rem;
+} */
