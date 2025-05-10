@@ -4,25 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management</title>
+    <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/home.css">
-    <script defer src="/script.js"></script>
+    
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="/images/logo.jpg" alt="hospi-connect">
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/appointment">Appointment</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/login" class="btn">Sign in</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <%- include("partials/header") %>
 
     <section class="hero">
         <div class="hero-content">
@@ -31,54 +19,35 @@
             <button class="cta-button">Take a Tour</button>
         </div>
         <div class="hero-image">
-            <img src="/images/doctor.jpeg" alt="Doctor">
+            <img src="/assets/welcome1.jpg" alt="Hospital Image">
         </div>
     </section>
 
+    
     <section class="services">
         <h2>Our Services</h2>
         <div class="service-cards">
             <div class="card">
-                <img src="/images/checkup.jpeg" alt="Health Checkup">
-                <h3>Health Checkup</h3>
-                <p>Regular health checkups to keep you fit.</p>
+                <img src="/images/service1.jpg" alt="Service 1">
+                <h3>Appointment Booking</h3>
+                <p>Book appointments with ease using our integrated system.</p>
             </div>
             <div class="card">
-                <img src="/images/ambulance.jpeg" alt="Ambulance Service">
-                <h3>24/7 Ambulance</h3>
-                <p>Emergency ambulance services available.</p>
+                <img src="/images/service2.jpg" alt="Service 2">
+                <h3>Patient Management</h3>
+                <p>Manage patient records and enhance doctor efficiency.</p>
             </div>
             <div class="card">
-                <img src="/images/doctor-team.jpeg" alt="Expert Doctors">
-                <h3>Expert Doctors</h3>
-                <p>Highly qualified and experienced doctors.</p>
+                <img src="/images/service3.jpg" alt="Service 3">
+                <h3>Pharmacy</h3>
+                <p>Streamline your pharmacy operations with our tools.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/appointment">Appointment</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <p>Phone: 000-000-000</p>
-            <p>Email: info@email.com</p>
-            <p>Location: India</p>
-        </div>
-        <div class="footer-section">
-            <h4>About Us</h4>
-            <p>Dedicated to Patient Well-being,</p>
-            <p>Compassionate Service,</p>
-            <p>Committed to Quality Healthcare</p>
-        </div>
-    </footer>
+    
+    <%- include("partials/footer") %>
 </body>
-</html>
+</html> 
+
+

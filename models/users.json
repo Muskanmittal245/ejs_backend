@@ -23,5 +23,10 @@
     "name": "abc",
     "email": "abc@gmail.com",
     "password": "$2b$10$ebF0WrODaEPS3Hi0rPFnWeGf1JvnCFbazu/nP3y2t67gSm/nVUKqa"
+  },
+  {
+    "name": "Krish Bahukhandi",
+    "email": "krishbahukhandi35@gmail.com",
+    "password": "$2b$10$Fs4dKgGct213xNXTFeJSYOJQ8zN4.U83B9MLC9AtrbpcJd9hUdrtS"
   }
 ]
