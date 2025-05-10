@@ -46,6 +46,34 @@ app.get("/services", (req, res) => res.render("services"));
 app.get("/contact", (req, res) => res.render("contact"));
 app.get("/home", (req, res) => res.render("home")); // Home after login
 
+app.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ message: "Logout failed" });
+    }
+    res.redirect("/");
+  });
+});
+app.get("/profile", (req, res) => {
+  if (!req.session.user) {
+    return res.redirect("/login");
+  }
+
+  // Dummy data for demonstration
+  const appointments = [
+    { date: "2025-05-01", doctor: "Smith", status: "Completed" },
+    { date: "2025-05-10", doctor: "Jones", status: "Upcoming" }
+  ];
+  const records = [
+    { title: "Blood Test", date: "2025-04-15" },
+    { title: "X-Ray", date: "2025-03-20" }
+  ];
+
+  res.render("profile", {
+    appointments,
+    records
+  });
+});
 // API routes
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);

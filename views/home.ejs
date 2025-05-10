@@ -6,48 +6,108 @@
     <title>Hospital Management</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/home.css">
-    
 </head>
 <body>
-    
     <%- include("partials/header") %>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Your Health, Our Priority</h1>
-            <p>We provide the best healthcare services with professional doctors.</p>
-            <button class="cta-button">Take a Tour</button>
+            <h1>Your Health,<br>Our Priority</h1>
+            <p>We provide the best healthcare services with professional doctors. Your wellness journey starts here — safe, modern, trusted.</p>
+            <a href="/appointment" class="cta-button">Take a Tour</a>
         </div>
         <div class="hero-image">
             <img src="/assets/welcome1.jpg" alt="Hospital Image">
         </div>
     </section>
-
     
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">
-                <img src="/images/service1.jpg" alt="Service 1">
-                <h3>Appointment Booking</h3>
-                <p>Book appointments with ease using our integrated system.</p>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <img src="/images/feature1.png" alt="24/7 Support">
+                <h3>24/7 Support</h3>
+                <p>Our team is available around the clock for your peace of mind.</p>
             </div>
-            <div class="card">
-                <img src="/images/service2.jpg" alt="Service 2">
-                <h3>Patient Management</h3>
-                <p>Manage patient records and enhance doctor efficiency.</p>
+            <div class="feature-card">
+                <img src="/images/feature2.png" alt="Expert Doctors">
+                <h3>Expert Doctors</h3>
+                <p>Consult with top-notch, qualified, and experienced doctors.</p>
             </div>
-            <div class="card">
-                <img src="/images/service3.jpg" alt="Service 3">
-                <h3>Pharmacy</h3>
-                <p>Streamline your pharmacy operations with our tools.</p>
+            <div class="feature-card">
+                <img src="/images/feature3.png" alt="Secure Records">
+                <h3>Secure Records</h3>
+                <p>Your health data is private, secure, and easy for you to access.</p>
             </div>
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="/images/service1.png" alt="Appointment Booking">
+                <h3>Appointment Booking</h3>
+                <p>Book appointments easily with our integrated system.</p>
+            </div>
+            <div class="card">
+                <img src="/images/service2.png" alt="Patient Management">
+                <h3>Patient Management</h3>
+                <p>Manage patient records and enhance doctor efficiency.</p>
+            </div>
+            <div class="card">
+                <img src="/images/service3.png" alt="Pharmacy">
+                <h3>Pharmacy</h3>
+                <p>Streamline your pharmacy operations with our modern tools.</p>
+            </div>
+        </div>
+        <a href="/services" class="cta-button secondary-cta">More About Our Services</a>
+    </section>
     
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Patients Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"HospiConnect made booking my doctor so simple. I love the quick service and friendly staff!"</p>
+                <span>- Ayesha S.</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"I trust them with my family's health. The doctors are caring and records are always secure."</p>
+                <span>- Ramesh T.</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Great hospital platform! 24/7 online help really gave me peace of mind. Highly recommended."</p>
+                <span>- Sneha M.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-info">
+        <h2>Contact & Location</h2>
+        <div class="contact-details">
+            <div>
+                <h4>Phone</h4>
+                <p>+91-9876543210</p>
+            </div>
+            <div>
+                <h4>Email</h4>
+                <p>info@hospiconnect.com</p>
+            </div>
+            <div>
+                <h4>Address</h4>
+                <p>123 Urban Health Road, City, State, 111222</p>
+            </div>
+        </div>
+        <div class="map-embed">
+            <iframe src="https://maps.google.com/maps?q=apollo%20hospital%20india&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="180" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
     <%- include("partials/footer") %>
 </body>
-</html> 
-
-
+</html>

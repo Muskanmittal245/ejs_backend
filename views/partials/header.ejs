@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HospiConnect</title>
-    
+    <link rel="stylesheet" href="/styles/global.css" />
+
 </head>
 <body>
   <header>
@@ -25,10 +26,39 @@
           <% } %>
         </ul>
         <% if (user) { %>
-          <span class="user-info"> <%= user.name %></span>
+          <div class="profile-dropdown">
+            <span class="user-info"><%= user.name %> &#x25BC;</span>
+            <ul class="dropdown-menu">
+              <li><a href="/profile">My Profile</a></li>
+              <li><a href="/profile/appointments">My Appointments</a></li>
+              <li><a href="/profile/records">Medical Records</a></li>
+              <li><a href="/">Logout</a></li>
+            </ul>
+          </div>
         <% } %>
       </div>
     </nav>
   </header>
+  <!-- Add just before </body> in header.ejs -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.profile-dropdown');
+    const userInfo = document.querySelector('.user-info');
+
+    if (dropdown && userInfo) {
+      userInfo.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
