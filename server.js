@@ -54,7 +54,19 @@ app.get("/logout", (req, res) => {
     res.redirect("/");
   });
 });
+
 app.get("/profile", (req, res) => {
+  if (!req.session.user) {
+    return res.redirect("/login");
+  }
+
+  // Pass all user details to the profile page
+  const user = req.session.user;
+
+  res.render("profile", { user });
+});
+
+app.get("/appointments", (req, res) => {
   if (!req.session.user) {
     return res.redirect("/login");
   }
@@ -69,10 +81,23 @@ app.get("/profile", (req, res) => {
     { title: "X-Ray", date: "2025-03-20" }
   ];
 
-  res.render("profile", {
+  res.render("appointments", {
     appointments,
-    records
   });
+});
+
+app.get("/medicalRecords", (req, res) => {
+  if (!req.session.user) {
+    return res.redirect("/login");
+  }
+
+  // Dummy data for demonstration
+  const records = [
+    { title: "Blood Test", date: "2025-04-15" },
+    { title: "X-Ray", date: "2025-03-20" }
+  ];
+
+  res.render("medicalRecords", { records });
 });
 // API routes
 const authRoutes = require("./routes/auth");

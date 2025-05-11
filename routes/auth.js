@@ -17,16 +17,31 @@ const writeUsers = (users) => {
 
 // Signup route
 router.post("/signup", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, mobileNumber, DOB, gender, address, password } = req.body;
   const users = readUsers();
 
+  // Check if the user already exists
   const userExists = users.find(user => user.email === email);
   if (userExists) {
     return res.status(400).json({ message: "User already exists" });
   }
 
+  // Hash the password
   const hashedPassword = await bcrypt.hash(password, 10);
-  const newUser = { id: Date.now().toString(), name, email, password: hashedPassword };
+
+  // Create a new user object
+  const newUser = {
+    id: Date.now().toString(),
+    name,
+    email,
+    mobileNumber,
+    DOB,
+    gender,
+    address,
+    password: hashedPassword
+  };
+
+  // Save the new user to the users.json file
   users.push(newUser);
   writeUsers(users);
 
@@ -38,21 +53,27 @@ router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const users = readUsers();
 
+  // Find the user by email
   const user = users.find(user => user.email === email);
   if (!user) {
     return res.status(400).json({ message: "Invalid email or password!" });
   }
 
+  // Verify the password
   const isPasswordValid = await bcrypt.compare(password, user.password);
   if (!isPasswordValid) {
     return res.status(400).json({ message: "Invalid email or password!" });
   }
 
-  // Store user in session
+  // Store all user details in the session
   req.session.user = {
     id: user.id,
     name: user.name,
-    email: user.email
+    email: user.email,
+    mobileNumber: user.mobileNumber,
+    DOB: user.DOB,
+    gender: user.gender,
+    address: user.address
   };
 
   res.status(200).json({ message: "Login successful!" });

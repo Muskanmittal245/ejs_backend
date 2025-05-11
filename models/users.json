@@ -28,5 +28,35 @@
     "name": "Krish Bahukhandi",
     "email": "krishbahukhandi35@gmail.com",
     "password": "$2b$10$Fs4dKgGct213xNXTFeJSYOJQ8zN4.U83B9MLC9AtrbpcJd9hUdrtS"
+  },
+  {
+    "id": "1746871180001",
+    "name": "Manan",
+    "email": "manan.aggarwal765@gmail.com",
+    "password": "$2b$10$4xXHKOy.ltOtNJCfWT.aie2OBNSBOfuXpvELkx73GRhHGJ9eRa7BK"
+  },
+  {
+    "id": "1746966626943",
+    "name": "Manan",
+    "email": "Manan@gmail.com",
+    "password": "$2b$10$2FF2geueF1Mp9XA2VJhATONmP4AigqKDQxjFbuJUnmgb8VsEokj9y"
+  },
+  {
+    "id": "1746967300079",
+    "name": "Manan",
+    "email": "Manan1@gmail.com",
+    "password": "$2b$10$MFtPDP2Omc81FoEM8HC4JeFoTOw4P4GJrLpMop.b7Dgix2ZJZlvNO"
+  },
+  {
+    "id": "1746967922034",
+    "name": "Manan Aggarwal ",
+    "email": "Manan2@gmail.com",
+    "password": "$2b$10$HXvhxT4KIMRKaDmbp86uH.Fo2Z4.Nr1Rx8UTcctOrzL1A6SL8uxF2"
+  },
+  {
+    "id": "1746968202613",
+    "name": "Manan Aggarwal ",
+    "email": "Manan3@gmail.com",
+    "password": "$2b$10$OomqeOTeJb5/ahWFlLd4n.Mpv3q5mUJIT75N.gybwuEew42j9NcB."
   }
 ]

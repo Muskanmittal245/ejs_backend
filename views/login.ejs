@@ -37,15 +37,27 @@
     <!-- SIGN-UP FORM -->
     <div id="signup-form" class="hidden">
       <div class="title">Sign Up</div>
-      <form id="signup-form-element">
+      <form id="signup-form-element" action="/api/auth/signup" method="POST">
         <div class="form-group">
-          <input type="text" id="signup-name" placeholder="Full Name" required />
+          <input type="text" id="signup-name" name="name" placeholder="Full Name" required />
         </div>
         <div class="form-group">
-          <input type="email" id="signup-email" placeholder="Email address" required />
+          <input type="email" id="signup-email" name="email" placeholder="Email address" required />
         </div>
         <div class="form-group">
-          <input type="password" id="signup-password" placeholder="Password" required />
+          <input type="password" id="signup-password" name="password" placeholder="Password" required />
+        </div>
+        <div class="form-group">
+          <input type="text" id="signup-phone" name="mobileNumber" placeholder="Phone Number" required />
+        </div>
+        <div class="form-group">
+          <input type="text" id="signup-birthdate" name="DOB" placeholder="Date of Birth (YYYY-MM-DD)" required />
+        </div>
+        <div class="form-group">
+          <input type="text" id="signup-gender" name="gender" placeholder="Gender" required />
+        </div>
+        <div class="form-group">
+          <input type="text" id="signup-address" name="address" placeholder="Address" required />
         </div>
         <button class="btn" type="submit">Create Account</button>
         <p style="margin-top:10px; font-size: 14px;">Already have an account? <span id="login-link" class="form-toggle">Log in</span></p>
