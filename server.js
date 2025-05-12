@@ -57,7 +57,7 @@ app.get("/logout", (req, res) => {
     }
     res.redirect("/");
   });
-});
+}); 
 
 app.get("/profile", (req, res) => {
   if (!req.session.user) {
