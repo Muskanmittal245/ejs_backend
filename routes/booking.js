@@ -1,37 +1,54 @@
-const express = require("express")
-const router = express.Router()
-const fs = require("fs")
-const path = require("path")
+const express = require("express");
+const router = express.Router();
+const Booking = require("../models/booking");
 
-const bookingsFilePath = path.join(__dirname, "../models/booking.json")
+router.post("/booking", async (req, res) => {
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      mobileNumber,
+      nic,
+      dob,
+      gender,
+      appointmentDate,
+      appointmentTime,
+      department,
+      address
+    } = req.body;
 
-const readBookings = () => {
-    if (!fs.existsSync(bookingsFilePath)) return []
-    const data = fs.readFileSync(bookingsFilePath)
-    return JSON.parse(data)
-}
-
-const writeBookings = (bookings) => {
-    if (!fs.existsSync(bookingsFilePath)) {
-        fs.writeFileSync(bookingsFilePath, JSON.stringify([]))
+    // Validate required fields
+    if (
+      !firstName || !lastName || !email || !mobileNumber ||
+      !nic || !dob || !gender || !appointmentDate ||
+      !appointmentTime || !department || !address
+    ) {
+      return res.status(400).json({ success: false, message: "All fields are required!" });
     }
-    fs.writeFileSync(bookingsFilePath, JSON.stringify(bookings, null, 2));
-};
 
-router.post("/booking", (req, res) => {
-    console.log(req.body);
-    const { firstName, lastName, email, mobileNumber, appointmentDate, department} = req.body
+    // Create and save booking
+    const newBooking = new Booking({
+      firstName,
+      lastName,
+      email,
+      mobileNumber,
+      nic,
+      dob,
+      gender,
+      appointmentDate,
+      appointmentTime,
+      department,
+      address
+    });
 
-    if (!firstName || !lastName || !email || !mobileNumber || !appointmentDate || !department) {
-        return res.status(400).json({ success: false, message: "All fields are required!" });
-    }
+    await newBooking.save();
 
-    const bookings = readBookings()
-    const newAppointment = { id: bookings.length + 1, firstName, lastName, email, mobileNumber, appointmentDate, department };
-    bookings.push(newAppointment);
-    writeBookings(bookings);
-
-    res.json({ success: true, message: "Appointment booked successfully", appointment: newAppointment });
+    res.json({ success: true, message: "Appointment booked successfully", appointment: newBooking });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Server error", error: error.message });
+  }
 });
 
-module.exports = router
+module.exports = router;

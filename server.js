@@ -64,7 +64,7 @@ app.get("/profile", (req, res) => {
     return res.redirect("/login");
   }
 
-  // Pass all user details to the profile page
+
   const user = req.session.user;
 
   res.render("profile", { user });
