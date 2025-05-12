@@ -1,52 +1,42 @@
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcryptjs');
+const User = require('../models/user');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-
-const readUsers = () => {
-  const data = fs.readFileSync(usersFilePath);
-  return JSON.parse(data);
-};
-
-const writeUsers = (users) => {
-  fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-};
-
+// Register User
 exports.registerUser = async (req, res) => {
-  const { name, email, password, role, department, specialization, phone, idNumber } = req.body;
+  const { name, email, password, gender, role, department, specialization, phone, idNumber, emailVerified, phoneVerified, DOB, address } = req.body;
 
   try {
-    const users = readUsers();
-    const userExists = users.find(user => user.email === email);
-
+    // Check if user already exists
+    const userExists = await User.findOne({ email });
     if (userExists) {
       return res.status(400).json({ message: 'User already exists' });
     }
 
+    // Hash password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const newUser = {
-      id: Date.now().toString(),
+    // Create new user
+    const newUser = new User({
       name,
       email,
       password: hashedPassword,
-      gender: req.body.gender,
+      gender,
       role,
       department,
       specialization,
-      phone,
+      mobileNumber: phone,
       idNumber,
-      emailVerified: req.body.emailVerified || false,
-      phoneVerified: req.body.phoneVerified || false,
-    };
+      emailVerified: emailVerified || false,
+      phoneVerified: phoneVerified || false,
+      DOB,
+      address,
+    });
 
-    users.push(newUser);
-    writeUsers(users);
+    await newUser.save();
 
     res.status(201).json({
-      id: newUser.id,
+      id: newUser._id,
       name: newUser.name,
       email: newUser.email,
       role: newUser.role,
@@ -56,41 +46,37 @@ exports.registerUser = async (req, res) => {
   }
 };
 
+// Authenticate User (Login)
 exports.authUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const users = readUsers();
-    const user = users.find(user => user.email === email);
-
+    const user = await User.findOne({ email });
     if (user && (await bcrypt.compare(password, user.password))) {
-      // ✅ Store user in session
+      // Store user in session
       req.session.user = {
-        id: user.id,
+        id: user._id,
         name: user.name,
         email: user.email,
         role: user.role,
       };
-
-      // ✅ Redirect to homepage/dashboard
-      res.redirect('/home'); // adjust this route as per your app
+      // Redirect or send success
+      res.status(200).json({ message: 'Login successful', user: req.session.user });
     } else {
-      // If credentials invalid, render login with error
-      res.status(401).render('login', { error: 'Invalid email or password' });
+      res.status(401).json({ message: 'Invalid email or password' });
     }
   } catch (error) {
-    res.status(500).render('login', { error: 'Server error' });
+    res.status(500).json({ message: 'Server error' });
   }
 };
 
+// Get User Details
 exports.getUserDetails = async (req, res) => {
   try {
-    const users = readUsers();
-    const user = users.find(user => user.id === req.session.user?.id);
-
+    const user = await User.findById(req.session.user?.id);
     if (user) {
       res.json({
-        id: user.id,
+        id: user._id,
         name: user.name,
         email: user.email,
         role: user.role,

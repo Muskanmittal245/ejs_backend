@@ -22,22 +22,20 @@ document.querySelector("#signup-form-element").addEventListener("submit", async 
     const name = document.querySelector("#signup-name").value;
     const email = document.querySelector("#signup-email").value;
     const password = document.querySelector("#signup-password").value;
+    const mobileNumber = document.querySelector("#signup-phone").value;
+    const DOB = document.querySelector("#signup-birthdate").value;
+    const gender = document.querySelector("#signup-gender").value;
+    const address = document.querySelector("#signup-address").value;
 
     const response = await fetch("http://localhost:8080/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, mobileNumber, DOB, gender, address }),
     });
 
     const result = await response.json();
-    alert(result.message);
-
-    if (response.ok) {
-        signUpForm.classList.add("hidden");
-        loginForm.classList.remove("hidden");
-    }
+    // handle result (show success/error message)
 });
-
 // Handle Login Form Submission
 document.querySelector("#login-form-element").addEventListener("submit", async (e) => {
     e.preventDefault();

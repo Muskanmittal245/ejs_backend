@@ -9,6 +9,10 @@ const errorHandler = require("./middlewares/errorHandler");
 const app = express();
 const PORT = 8080;
 
+require('dotenv').config();
+const connectDB = require('./config/db');
+connectDB();
+
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
