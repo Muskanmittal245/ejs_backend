@@ -69,26 +69,8 @@ app.get("/profile", (req, res) => {
 
   res.render("profile", { user });
 });
-
-app.get("/appointments", (req, res) => {
-  if (!req.session.user) {
-    return res.redirect("/login");
-  }
-
-  // Dummy data for demonstration
-  const appointments = [
-    { date: "2025-05-01", doctor: "Smith", status: "Completed" },
-    { date: "2025-05-10", doctor: "Jones", status: "Upcoming" }
-  ];
-  const records = [
-    { title: "Blood Test", date: "2025-04-15" },
-    { title: "X-Ray", date: "2025-03-20" }
-  ];
-
-  res.render("appointments", {
-    appointments,
-  });
-});
+const appointmentsRouter = require('./routes/appointments');
+app.use('/appointments', appointmentsRouter);
 
 app.get("/medicalRecords", (req, res) => {
   if (!req.session.user) {
@@ -108,7 +90,7 @@ const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
 
 const contactRoutes = require("./routes/contact");
-app.use("/api", contactRoutes);
+app.use("/", contactRoutes);
 
 const bookingRoutes = require("./routes/booking");
 app.use("/api", bookingRoutes);
